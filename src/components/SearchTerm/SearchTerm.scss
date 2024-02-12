@@ -1,0 +1,67 @@
+.input-wrapper{
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 100px;
+    text-align: center;
+    color: white;
+
+    & form {
+        & input{
+            padding: 10px 40px 10px 20px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background-color: rgb(46, 48, 72);
+            border: 1px solid black;
+            outline: none;
+            color: white;
+            
+        }
+        & button{
+            padding: 10px;
+            color: white;
+            background-color: rgb(11, 11, 255);
+            border: 1px solid black;
+            border-left: none;
+            cursor: pointer;
+            transition: 0.5s ease;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        & button:hover{
+            background-color: rgb(23, 23, 207);
+        } 
+    }
+}
+.search-error{
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+}
+.search_card{
+    margin: 100px auto;
+    max-width: 330px;
+    background-color: rgb(46, 48, 72);
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
+    
+    & img{
+        width: 100%;
+        border-radius: 20px;
+    }
+    & .card__content{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
+.search_card:hover{
+    box-shadow: 3px 3px 13px 0px rgba(255,255,255,0.75);
+-webkit-box-shadow: 3px 3px 13px 0px rgba(255,255,255,0.75);
+-moz-box-shadow: 3px 3px 13px 0px rgba(255,255,255,0.75);
+}
