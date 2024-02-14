@@ -7,6 +7,7 @@ import Register from "../components/Register/Register"
 import Navbar from "../components/Navbar/Navbar"
 import Meme from "../components/Blog/Meme"
 import MovieDetail from "../components/MovieDetail/MovieDetail"
+import Login from "../components/Login/Login"
 
 const MainRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const MainRoutes = () => {
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/blogs" element={<Blog/>}/>
       <Route path="/register" element={<Register/>}/>
+      <Route path="/login" element={<Login/>}/>
       <Route path="/blogs/skeleton" element={<Meme/>}/>
       <Route path="/movie/:movieId" element={<MovieDetail/>}/>
       

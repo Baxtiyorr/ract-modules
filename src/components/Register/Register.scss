@@ -1,0 +1,75 @@
+.register-wrapper{
+    width: 550px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 35px;
+    padding: 30px 40px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.register-wrapper h1{
+    text-align: left;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+}
+.register-wrapper form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+.register-wrapper form input{
+    width: 559px;
+    padding: 13px 10px;
+    border-radius: 6px;
+    border: 1px solid grey;
+    outline: none;
+}
+
+
+.reg_btn{
+    padding: 10px 80px;
+    border-radius: 76px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    background-color: red;
+    transition: 0.5s ease;
+}
+.reg_btn:hover{
+background-color: rgb(218, 4, 4);
+}
+
+.error_text{
+    color: red;
+    filter: drop-shadow(3px 3px 5px red);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 13px;
+}
+.btn_wrapper{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+.show{
+    color: rgb(11, 153, 236);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.show:hover{
+    text-decoration: underline;
+}
