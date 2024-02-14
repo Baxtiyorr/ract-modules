@@ -1,0 +1,28 @@
+.pics{
+    margin-top: 50px;
+    text-align: center;
+    & img{
+        width: 330px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+    & h2 a{
+        color: white;
+        text-decoration: none;
+        
+    }
+}
+.meme_component{
+    max-width: 690px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    & a{
+        color: white;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        display: block;
+    }
+}

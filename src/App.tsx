@@ -3,14 +3,15 @@
 
 
 import './App.scss'
-import SearchSection from './components/SearchTerm/SearchSection'
+import HomePage from './components/Pages/HomePage'
+import MainRoutes from './routes/MainRoutes'
 
 
 function App() {
 
   return (
    <>
-   <SearchSection/>
+   <MainRoutes/>
    </>
   )
 }

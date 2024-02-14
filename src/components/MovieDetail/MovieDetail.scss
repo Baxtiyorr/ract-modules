@@ -1,0 +1,95 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+:root {
+    --clr-3: rgb(64, 64, 225);
+    --clr-4: rgb(138, 49, 183);
+    --clr-5: rgb(189, 65, 52);
+  }
+
+.movie__wrapper{
+    margin-top: 50px;
+    background-color: #2B3945FF;
+    padding: 40px;
+    position: relative;
+    border-radius: 20px;
+
+    & img{
+        border-radius: 20px;
+       
+    }
+    &-img{
+       
+        text-align: center;
+    }
+
+    &-content{
+        margin: 80px 0 0 100px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        & h2 p{
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        
+    }
+}
+
+a{ 
+    text-decoration: none;
+
+& button{
+background-color: blue;
+color: white;
+border: none;
+padding: 10px 90px;
+border-radius: 20px;
+font-weight: 600;
+font-size: 20px;
+line-height: 32px;
+display: flex;
+align-items: center;
+column-gap: 10px;
+cursor: pointer;
+transition: 0.5s ease;
+}
+& button:hover{
+   
+   background-color: rgb(19, 19, 200);
+}
+}
+.movie__wrapper::before,
+.movie__wrapper::after{
+    content: "";
+  position: absolute;
+  inset: -0.1rem;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3)
+  );
+  border-radius: inherit;
+  animation: rotation 20s linear infinite;
+}
+.movie__wrapper::after{
+    filter: blur(3.5rem);
+}
+
+@keyframes rotation {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    100% {
+      --gradient-angle: 360deg;
+    }
+  }
+  
