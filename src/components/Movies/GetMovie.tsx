@@ -99,3 +99,75 @@ const GetMovie = () => {
 };
 
 export default GetMovie;
+
+// import { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import { useDispatch, useSelector } from "react-redux";
+// import { RootState } from "../../redux/store";
+// import { getMovies } from "../../redux/slice/getMoviesSlice"; 
+// import Loading from "../Loading/Loading";
+// import SearchMovie from "../SearchMovie/SearchMovie";
+// import './GetMovie.scss';
+
+// const GetMovie: React.FC = () => {
+//     const dispatch = useDispatch()
+//     const { loading, data: movies } = useSelector((state: RootState) => state.getData);
+
+//     const [page, setPage] = useState<number>(1);
+//     const url = `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=${page}`;
+
+//     useEffect(() => {
+//          dispatch(getMovies(url))
+//     }, [dispatch, page, url]); 
+
+//     const handleNextPage = () => {
+//         setPage(page + 1);
+//     };
+
+//     const handlePrevPage = () => {
+//         if (page > 1) {
+//             setPage(page - 1);
+//         }
+//     };
+
+//     console.log(movies);
+    
+//     if (loading || !movies) {
+//         return <Loading />;
+//     }
+
+//     const imgUrl = 'https://image.tmdb.org/t/p/w500';
+
+//     return (
+//         <section>
+//             <div className="container">
+//                 <div className="movies">
+//                     <h2 className="movies__title">Movies</h2>
+//                     <SearchMovie />
+//                     <h2 className="movies__title movies__title--all">All Movies</h2>
+//                     <div className="movies__card-wrapper">
+//                         { movies.map((movie, index) => (
+//                             <Link key={index} to={`/movie/${movie.id}`}>
+//                                 <div className="movies__card">
+//                                     <img src={`${imgUrl}${movie.poster_path}`} alt={movie.title} />
+//                                     <div className="movies__card-content">
+//                                         <h2>{movie.title}</h2>
+//                                         <p>{movie.overview}</p>
+//                                         <span>{movie.vote_average}</span>
+//                                     </div>
+//                                 </div>
+//                             </Link>
+//                         ))}
+//                     </div>
+//                     <div className="pagination">
+//                         <button onClick={handlePrevPage} disabled={page === 1}>Previous</button>
+//                         <span>{page}</span>
+//                         <button onClick={handleNextPage}>Next</button>
+//                     </div>
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
+
+// export default GetMovie;
